@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="site.master.cs" Inherits="site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 1199px;
+        }
+        .auto-style2 {
+            height: 118px;
+        }
+        .auto-style3 {
+            height: 813px;
+        }
+        .auto-style4 {
+            width: 100%;
+        }
+        .auto-style5 {
+            text-align: center;
+        }
+        .auto-style6 {
+            width: 100%;
+            height: 139px;
+        }
+        .auto-style8 {
+            text-decoration: none;
+            font-size: xx-large;
+            color: #FFFF99;
+        }
+        .auto-style10 {
+            width: 150px;
+        }
+        .auto-style11 {
+            width: 946px;
+        }
+        .auto-style12 {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+        .auto-style13 {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" class="auto-style1" style="background-image: url('/Image/bg.jpg')">
+   
+
+      
+
+
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+        <asp:Timer ID="Timer1" runat="server" Interval="3000" OnTick="Timer1_Tick"></asp:Timer>
+        <asp:Image ID="Image1" runat="server" Height="200px" Width="1330px" />
+        </ContentTemplate>
+        </asp:UpdatePanel>
+        
+
+        
+        <div class="auto-style2" style="background-color: #009933">
+
+       <br />
+            <br />
+       <table class="auto-style4">
+           <tr>
+               <td class="auto-style5"><strong>
+                   <asp:HyperLink ID="HyperLinkHome" runat="server" CssClass="auto-style8" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                   &nbsp;
+                   <asp:HyperLink ID="HyperLinkRegistration" runat="server" CssClass="auto-style8" NavigateUrl="~/Registration.aspx">Registration</asp:HyperLink>
+                   &nbsp;
+                   <asp:HyperLink ID="HyperLinkNote" runat="server" CssClass="auto-style8" NavigateUrl="~/Text.aspx">Note</asp:HyperLink>
+                   &nbsp;
+                   <asp:HyperLink ID="HyperLinkNoteList" runat="server" CssClass="auto-style8" NavigateUrl="~/NoteList.aspx">NoteList</asp:HyperLink>
+                   &nbsp;
+                   <asp:HyperLink ID="HyperLinkLogin" runat="server" CssClass="auto-style8" NavigateUrl="~/LogIn.aspx">LogIn</asp:HyperLink>
+                   &nbsp;
+                   <asp:HyperLink ID="HyperLinkGallery" runat="server" CssClass="auto-style8" NavigateUrl="~/ImageGallery.aspx">Gallery</asp:HyperLink>
+                   &nbsp;
+                   <asp:HyperLink ID="HyperLinkContat" runat="server" CssClass="auto-style8" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+                   &nbsp;
+                   </strong>
+                   <asp:Label ID="LabelEmail" runat="server"></asp:Label>
+               &nbsp;&nbsp;
+                   <asp:LinkButton ID="LinkButtonEdit" runat="server" CssClass="auto-style13" OnClick="LinkButton1_Click">Edit</asp:LinkButton>
+&nbsp;
+                   <asp:LinkButton ID="LinkButtonLogout" runat="server" CssClass="auto-style12" OnClick="LinkButtonLogout_Click">Logout</asp:LinkButton>
+               </td>
+           </tr>
+       </table>
+
+   </div>
+    <div class="auto-style3">
+
+        <table class="auto-style6">
+            <tr>
+                <td class="auto-style10">&nbsp;</td>
+                <td rowspan="3" class="auto-style11">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style10">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style10">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+    </div>
+    </form>
+</body>
+</html>
